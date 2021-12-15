@@ -3,15 +3,19 @@ import { Search } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import {mobile} from '../responsive'
 
 const Container = styled.div`
-  height: 80px !important;
+  height: 80px;
+  ${mobile({height: "50px"})};
+
 `;
 const Wrapper = styled.div`
-  padding: 10px 20px;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({padding: "10px 0px"})};
 `;
 const Left = styled.div`
   flex: 1;
@@ -32,6 +36,7 @@ const Logo = styled.h1``;
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({display: "none"})};
 `;
 const Center = styled.div`
   flex: 1;
