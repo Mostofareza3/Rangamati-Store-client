@@ -7,8 +7,7 @@ import {mobile} from '../responsive'
 
 const Container = styled.div`
   height: 80px;
-  ${mobile({height: "50px"})};
-
+  ${mobile({height: "70px"})};
 `;
 const Wrapper = styled.div`
   padding: 0px 20px;
@@ -31,8 +30,14 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.input`
   border: none;
+  ${mobile({width:"50px"})};
 `;
-const Logo = styled.h1``;
+const Logo = styled.h1`
+font-weight: bold;
+  ${mobile({fontSize: "24px", marginLeft:"15px"})};
+
+`;
+
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
@@ -47,12 +52,15 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({justifyContent:"center", flex:3})}
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  ${mobile({fontSize:"12px", marginLeft:"8px"})}
+
 `;
 
 const Navbar = () => {
@@ -62,12 +70,12 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input></Input>
+            <Input placeholder="Search"></Input>
             <Search style={{color:"gray", fontSize:"16px"}}/>
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Rangamati Shop</Logo>
+          <Logo>SHOP</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
